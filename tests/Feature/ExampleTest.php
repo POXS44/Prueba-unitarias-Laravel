@@ -39,14 +39,27 @@ class ExampleTest extends TestCase
     //         ]);
     // }
 
-    public function test_guardar()
+    // public function test_guardar()
+    // {
+    //     $response = $this->post('/api/productos', ['nombre' => 'PHONE9','tipo' => 'Celular']);
+
+    //     $response
+    //         ->assertStatus(200)
+    //         ->assertJson([
+    //             'mensaje' => 'Productos guardado exitosamente',
+    //         ]);
+    // }
+
+    public function test_index()
     {
-        $response = $this->post('/api/productos', ['nombre' => 'PHONE9','tipo' => 'Celular']);
+        $response = $this->get('/api/productos');
 
         $response
             ->assertStatus(200)
             ->assertJson([
-                'mensaje' => 'Productos guardado exitosamente',
+                
             ]);
     }
+
+
 }
